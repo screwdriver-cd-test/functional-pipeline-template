@@ -11,3 +11,14 @@ jobs:
       BAZ: "qux"
     annotations:
       screwdriver.cd/displayName: "foo-bar"
+
+  test:
+    image: node:23
+    environment:
+      QUX: "quux"
+    annotations:
+      screwdriver.cd/displayName: "baz-qux"
+    steps:
+      - pretest: echo 'pretest'
+      - test: echo $QUX
+      - posttest: echo 'posttest'
