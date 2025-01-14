@@ -3,3 +3,11 @@ shared:
   image: node:20
   environment:
     BAR: "baz"
+
+jobs:
+  main:
+    image: node:22
+    environment:
+      BAZ: "qux"
+    annotations:
+      screwdriver.cd/displayName: "foo-bar"
