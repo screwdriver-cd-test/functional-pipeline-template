@@ -1,4 +1,4 @@
-template: screwdriver-cd-test/test-pipeline-template@1.0.0
+template: screwdriver-cd-test/test-pipeline-template@latest
 shared:
   image: node:20
   environment:
